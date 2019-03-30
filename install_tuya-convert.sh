@@ -54,4 +54,6 @@ echo -e \
   " password: tuya\n\n" >> /etc/issue
 sed -i "s/^\(root\)\(.*\)\(\/bin\/bash\)$/\1\2\/root\/login.sh/" /etc/passwd
 
+sed -i "s/^\#//; s/prohibit-password/yes/" /etc/sshd_config
+
 rm /root/install_tuya-convert.sh
